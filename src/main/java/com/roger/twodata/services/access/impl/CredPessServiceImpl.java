@@ -26,10 +26,6 @@ public class CredPessServiceImpl implements CredPessService {
     public CredPess atualizar(CredPess credPess) {
         return this.repo.save(credPess);
     }
-   /* @Override
-    public Optional<CredPess> buscarCPF(String cpf) {
-        return this.repo.findCredPessByPes_cpf(cpf);
-    }*/
     @Override
     public void deletar(Long id) {
         this.repo.deleteById(id);

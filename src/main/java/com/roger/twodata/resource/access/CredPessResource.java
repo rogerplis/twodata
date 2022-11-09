@@ -27,11 +27,7 @@ public class CredPessResource {
         LocalDateTime CRPES_DATASAIDA = CRPES_DATAENTRADA.plusYears(10);
         CredPess.setCrpes_dataentrada(CRPES_DATAENTRADA);
         CredPess.setCrpes_datasaida(CRPES_DATASAIDA);
-        // verifica se o cpf ja esta cadatrado
-        /*if (repo.existsByCrednumero(CredPessnumero)) {
-            return ResponseEntity.ok(" CredPess  : " + CredPessnumero + "Já esta cadastrada");
-        }*/
-        // cadastra a CredPess
+        // vincula a credencial a pessoa
         service.cadastrar(CredPess);
         return ResponseEntity.ok("Cadastrada com Sucesso");
     }
