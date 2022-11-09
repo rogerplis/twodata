@@ -15,10 +15,14 @@ public class Pessoa {
     @Id
     @Column(name = "pes_numero")
     private Long id;
-    private String pes_nome;
-    private String pes_cpf;
-    private String pes_obs;
-    private String pes_email;
+    @Column(name = "pes_nome")
+    private String nome;
+    @Column(name = "pes_cpf")
+    private String cpf;
+    @Column(name = "pes_obs")
+    private String obs;
+    @Column(name = "pes_email")
+    private String email;
     private String pes_rg;
     private char pes_flagreentrada;
     private char pes_master;
@@ -45,12 +49,12 @@ public class Pessoa {
     public Pessoa() {
     }
 
-    public Pessoa(Long id, String pes_nome, String pes_cpf, String pes_obs, String pes_email, String pes_rg, char pes_flagreentrada, char pes_master, String pes_foto, String pes_senha, String pes_ramal, String pes_campoperso1, String pes_campoperso2, String pes_campoperso3, String pes_campoperso4, String pes_campoperso5, LocalDateTime pes_dtsitinicial, LocalDateTime pes_dtsitfinal, String cred_prov, Integer reg_numero, Integer rfa_numero, Long emp_numero, LocalDateTime pes_recolheprov, Long pes_pis, Long est_numero, Long pessit_numero) {
+    public Pessoa(Long id, String nome, String cpf, String obs, String email, String pes_rg, char pes_flagreentrada, char pes_master, String pes_foto, String pes_senha, String pes_ramal, String pes_campoperso1, String pes_campoperso2, String pes_campoperso3, String pes_campoperso4, String pes_campoperso5, LocalDateTime pes_dtsitinicial, LocalDateTime pes_dtsitfinal, String cred_prov, Integer reg_numero, Integer rfa_numero, Long emp_numero, LocalDateTime pes_recolheprov, Long pes_pis, Long est_numero, Long pessit_numero) {
         this.id = id;
-        this.pes_nome = pes_nome;
-        this.pes_cpf = pes_cpf;
-        this.pes_obs = pes_obs;
-        this.pes_email = pes_email;
+        this.nome = nome;
+        this.cpf = cpf;
+        this.obs = obs;
+        this.email = email;
         this.pes_rg = pes_rg;
         this.pes_flagreentrada = pes_flagreentrada;
         this.pes_master = pes_master;

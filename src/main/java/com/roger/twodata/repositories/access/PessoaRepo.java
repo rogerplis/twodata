@@ -8,5 +8,6 @@ import java.util.Optional;
 public interface PessoaRepo extends JpaRepository<Pessoa, Long> {
 
     //Optional<Pessoa> findPessoaByPes_cpf(String cpf);
+    Boolean existsByCpf(String cpf);
 
 }
